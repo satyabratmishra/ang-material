@@ -1,0 +1,61 @@
+<h2 mat-dialog-title>SELECTION FORM</h2>
+<div class="container col-md-9" style="align-items: center;">
+  <div class="col-md-4" style="float: left; text-align: center; margin-right: 20px;"><mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <input matInput>
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="attributes">
+      <mat-header-cell *matHeaderCellDef> Attributes </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.attributes}} </mat-cell>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="group">
+      <mat-header-cell *matHeaderCellDef> Certification Group </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.group}} </mat-cell>
+    </ng-container>
+  
+  
+  
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+  </div>
+  <div class="col-md-1" style="float: left; text-align: center; vertical-align:middle; margin-right: 20px;">
+    <div><button mat-raised-button>></button></div>
+    <div><button mat-raised-button>>></button></div>
+    <div><button mat-raised-button><</button></div>
+    <div><button mat-raised-button><<</button></div>
+  </div>
+  <div class="col-md-4" style="float: left; text-align: center;margin-right: 20px;"><mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <input matInput>
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+    </ng-container>
+  
+    <!-- Weight Column -->
+    <ng-container matColumnDef="attributes">
+      <mat-header-cell *matHeaderCellDef> Attributes </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.attributes}} </mat-cell>
+    </ng-container>
+  
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="group">
+      <mat-header-cell *matHeaderCellDef> Certification Group </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.group}} </mat-cell>
+    </ng-container>
+  
+  
+  
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+  </div>  
+</div>

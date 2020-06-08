@@ -1,0 +1,89 @@
+<div >
+<mat-toolbar class="navbar">
+  <div>DCKA</div>
+  <!--<div layout-align='end'>
+        <span><mat-icon>zoom_in</mat-icon></span>
+        <span>100%</span>        
+        <span><mat-icon>desktop_windows</mat-icon></span>
+        <span><mat-icon>build</mat-icon></span>              
+  </div>-->
+  <div fxLayout="row" fxLayoutAlign="end center" ><span>DCKA Admin Group<br>Satya</span></div>
+  <!--<div layout-align='end'><span>DCKA Admin Group<br>Satya</span></div>  -->        
+  <!--<div layout-align='end'>
+    <span><mat-icon>help</mat-icon></span>
+    <span><mat-icon>minimize</mat-icon></span>
+    <span><mat-icon>maximize</mat-icon></span>
+    <span><mat-icon>close</mat-icon></span>
+  </div>      -->
+  </mat-toolbar>
+  <div style="background-color: #f08400;">
+    <mat-tab-group>
+      <mat-tab label='DCKA Home Page'>Content</mat-tab>
+      <mat-tab label='Certifications'>
+        <div style="background-color: #ffffff;">
+          <mat-form-field >
+            <div fxLayout="row" fxLayoutAlign="start center" >                         
+                <mat-label color='#000000'>Select BU</mat-label>
+                  <mat-select>
+                    <mat-option>BU 1</mat-option>
+                    <mat-option>BU 2</mat-option>
+                    <mat-option>BU 3</mat-option>
+                    <mat-option>BU 4</mat-option>
+                  </mat-select>                          
+                <mat-label color='#000000'>Select View</mat-label>
+                  <mat-select>
+                    <mat-option>View 1</mat-option>
+                    <mat-option>View 2</mat-option>
+                    <mat-option>View 3</mat-option>
+                    <mat-option>View 4</mat-option>
+                  </mat-select>
+            
+
+            <div><mat-label color='#000000'>Keyword</mat-label><input matInput></div>
+            <div><button mat-raised-button (click)="openDialog()">Open Dialog</button></div>
+            
+          </div>
+            <div class='mat-elevation-z8 datatable' style="width: 1345px;">
+            <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+              <!-- Position Column -->
+              <ng-container matColumnDef="position">
+                <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
+                <mat-cell *matCellDef="let element"> <mat-icon>{{element.position}}</mat-icon></mat-cell>
+              </ng-container>
+            
+              <!-- Name Column -->
+              <ng-container matColumnDef="name">
+                <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+              </ng-container>
+            
+              <!-- Weight Column -->
+              <ng-container matColumnDef="attributes">
+                <mat-header-cell *matHeaderCellDef> Attributes </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.attributes}} </mat-cell>
+              </ng-container>
+            
+              <!-- Symbol Column -->
+              <ng-container matColumnDef="group">
+                <mat-header-cell *matHeaderCellDef> Certification Group </mat-header-cell>
+                <mat-cell *matCellDef="let element"> {{element.group}} </mat-cell>
+              </ng-container>
+            
+   
+
+              <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+              <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+            </mat-table>
+          </div>
+          </mat-form-field>  
+        </div>
+       
+        
+      </mat-tab>
+      <mat-tab label='Item'>ITEM</mat-tab>
+      <mat-tab label='Template'>TEMPLATE</mat-tab>
+      <mat-tab label='Type Management'>TYPE MANAGEMENT</mat-tab>
+      
+    </mat-tab-group>
+  </div>
+</div>
